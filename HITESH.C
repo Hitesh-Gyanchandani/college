@@ -1,42 +1,40 @@
 #include<stdio.h>
 #include<conio.h>
+void dia(float);
+void circumference(float);
+void area(float);
 void main()
 {
-int a[20],n,low,high,mid,i,x;
+float r,m,n,l,j;
+int c;
 clrscr();
-printf("Enter the size of the array");
-scanf("%d",&n);
-printf("Enter the elements");
-for(i=0;i<n;i++)
+printf("\nenter the  character");
+scanf("%d",&c);
+//scanf("%f",&r);
+switch(c)
 {
-printf("a[%d]=",i);
-scanf("%d",&a[i]);
-}
-printf("Enter element to be sorted");
-scanf("%d",&x);
-low=0;
-high=n-1;
-while(low<=high)
-{
-mid=(low+high)/2;
-if(x==a[mid])
-{
-printf(" \n search successful a[%d]",mid);
+case 1:
+scanf("%f",&r);
+ dia(r);
+//getch();
 break;
-}
-if(x>a[mid])
-{
-low=mid+1;
-}
-if(x<a[mid])
-{
-high=mid-1;
-mid=(low+high)/2;
-}
-}
-if(low>high)
-{
-printf("not found %d",x);
+/*case 'c':
+n=circumference(r);
+printf("%f",n);
+getch();
+break;
+case'a':
+l=area(r);
+printf("%f",l);
+getch();
+break; */
+
 }
 getch();
+}
+void dia(float x)
+{
+float g;
+g=2*x;
+printf("%f",g);
 }
